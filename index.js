@@ -1,43 +1,21 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+import React from 'react';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Feed from './components/Feed';
+import Widgets from './components/Widgets';
+import './App.css';
+
+function App() {
+  return (
+    <div>
+      <Navbar />
+      <div className="container">
+        <Sidebar />
+        <Feed />
+        <Widgets />
+      </div>
+    </div>
+  );
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  background-color: #3b5998;
-  padding: 10px 20px;
-  color: white;
-}
-
-.navbar input {
-  flex: 1;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-}
-
-.sidebar {
-  width: 300px;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.feed {
-  flex: 1;
-  margin: 0 20px;
-}
-
-.widgets {
-  width: 300px;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
+export default App;
